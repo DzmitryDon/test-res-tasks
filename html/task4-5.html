@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="/js/task4.js"></script>
+
+    <title>-Test JS-</title>
+  </head>
+
+  <body>
+    <h1>Task 4-5</h1>
+
+    <p>domain.one</p>
+    <iframe name="iframe" id="ifr" src="domain.two.html"></iframe>
+
+    <script>
+      "use strict";
+
+      let iframe = document.getElementById("ifr").contentWindow,
+        sender = new SenderData(iframe);
+
+      // Ждем загрузку страницы и iframe.
+      window.onload = () => {
+        // можем выполнять, например:
+        //sender.addData({ test: "this is test add" });
+        //sender.readData("test-read");
+        //sender.deleteData("test-deleted");
+      };
+    </script>
+  </body>
+</html>
